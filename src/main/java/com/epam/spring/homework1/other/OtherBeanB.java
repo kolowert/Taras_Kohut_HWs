@@ -14,7 +14,10 @@ public class OtherBeanB {
 	public void setBeanB(BeanB beanB) {
 		this.beanB = beanB;
 		System.out.println(this.getClass().getSimpleName() + ". " + beanB.getClass().getSimpleName()
-				+ " was injected through the conctructor");
+				+ " was injected through the setter");
 	}
 
+	public BeanB getBeanB() {
+		return beanB;
+	}
 }

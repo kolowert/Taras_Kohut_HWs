@@ -7,9 +7,9 @@ import com.epam.spring.homework1.beans.BeanA;
 
 @Component
 public class OtherBeanA {
-	
+
 	private BeanA beanA;
-	
+
 	@Autowired
 	public OtherBeanA(BeanA beanA) {
 		this.beanA = beanA;
@@ -20,5 +20,4 @@ public class OtherBeanA {
 	public BeanA getBeanA() {
 		return beanA;
 	}
-	
 }

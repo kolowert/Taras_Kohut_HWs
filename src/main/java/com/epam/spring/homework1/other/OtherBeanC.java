@@ -14,5 +14,4 @@ public class OtherBeanC {
 	public OtherBeanC() {
 		System.out.println(beanC);
 	}
-
 }
