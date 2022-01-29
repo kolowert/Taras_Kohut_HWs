@@ -8,15 +8,19 @@ import com.epam.spring.homework2.config.App2Config;
 
 public class App2 {
 	public static void main(String[] args) {
-		BeanA beanA = new BeanA();
-		System.out.println(beanA);
-		
+//		BeanA beanFirst = new BeanA();
+//		System.out.println(beanFirst);
+
 		AbstractApplicationContext context = new AnnotationConfigApplicationContext(App2Config.class);
 		String[] beanDefinitionNames = context.getBeanDefinitionNames();
 		for (String beanDefinitionName : beanDefinitionNames) {
-			System.out.println(beanDefinitionName);
+			Object bean = context.getBean(beanDefinitionName);
+			String beanInfo = bean.toString();
+			if (beanInfo.contains("name")) {
+				System.out.println(bean.toString());
+			}
 		}
-		
+
 		context.close();
 	}
 }

@@ -1,8 +1,5 @@
-package com.epam.spring.homework2.bean;
+package com.epam.spring.homework2.beanito;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class BeanE {
 	private String name;
 	private long value;
