@@ -3,13 +3,10 @@ package com.epam.spring.homework2;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import com.epam.spring.homework2.bean.BeanA;
 import com.epam.spring.homework2.config.App2Config;
 
 public class App2 {
 	public static void main(String[] args) {
-//		BeanA beanFirst = new BeanA();
-//		System.out.println(beanFirst);
 
 		AbstractApplicationContext context = new AnnotationConfigApplicationContext(App2Config.class);
 		String[] beanDefinitionNames = context.getBeanDefinitionNames();

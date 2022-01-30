@@ -1,4 +1,4 @@
-package com.epam.spring.homework2.bean;
+package com.epam.spring.homework2.bcd;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -6,13 +6,13 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(1)
-@PropertySource("classpath:bcd.yml")
-public class BeanD {
-	@Value("${beanD.name}")
+@Order(2)
+@PropertySource("bcd.properties")
+public class BeanB {
+	@Value("${beanB.name}")
 	private String name;
-	@Value("${beanD.value}")
-	private long value;
+	@Value("${beanB.value}")
+	private int value;
 	
 	@Override
 	public String toString() {

@@ -1,9 +1,9 @@
 beanB:
-    name: Bob
-    value: 1643471904
+    name: Yaml Bob
+    value: !!int 471952
 beanC:
-    name: Clara
-    value: 1643471952
+    name: Yaml Clara
+    value: !!int 471952
 beanD:
-    name: Daniela
-    value: 1643472007
+    name: Yaml Daniela
+    value: !!int 472007
