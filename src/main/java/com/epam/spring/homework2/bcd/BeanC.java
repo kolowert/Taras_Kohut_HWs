@@ -3,6 +3,11 @@ package com.epam.spring.homework2.bcd;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 
+import com.epam.spring.homework2.abstraction.CustomComponent;
+import com.epam.spring.homework2.abstraction.ShouldValid;
+
+@CustomComponent
+@ShouldValid
 @PropertySource("bcd.properties")
 public class BeanC {
 	@Value("${beanC.name}")
@@ -11,11 +16,11 @@ public class BeanC {
 	private int value;
 	
 	public void init() {
-		System.out.println("doInit # BeanC");
+		System.out.println("init # BeanC");
 	}
 	
 	public void destroy() {
-		System.out.println("doDestroy # BeanC");
+		System.out.println("destroy # BeanC");
 	}
 	
 	@Override

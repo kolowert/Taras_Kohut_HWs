@@ -2,6 +2,7 @@ package com.epam.spring.homework2.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.annotation.Order;
 
 import com.epam.spring.homework2.bcd.BeanB;
@@ -12,13 +13,13 @@ import com.epam.spring.homework2.bcd.BeanD;
 public class App2ConfigBcd {
 	
 	@Bean(initMethod="init",destroyMethod="destroy")
-	@Order(2)
+	@DependsOn("beanD")
 	public BeanB beanB() {
 		return new BeanB();
 	}
 	
 	@Bean(initMethod="init",destroyMethod="destroy")
-	@Order(3)
+	@DependsOn("beanB")
 	public BeanC beanC() {
 		return new BeanC();
 	}

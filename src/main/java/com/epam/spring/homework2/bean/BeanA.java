@@ -6,7 +6,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.epam.spring.homework2.abstraction.CustomComponent;
+import com.epam.spring.homework2.abstraction.ShouldValid;
+
 @Component
+@CustomComponent
+@ShouldValid
 @Qualifier("justA")
 @Order(4)
 public class BeanA implements InitializingBean, DisposableBean {

@@ -1,6 +1,7 @@
 package com.epam.spring.homework2.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
@@ -15,7 +16,7 @@ import com.epam.spring.homework2.bean.BeanF;
 
 @Configuration
 @PropertySource("classpath:bcd.properties")
-//@ComponentScan(basePackages = "com.epam.spring.homework2.bcd")
+@ComponentScan(basePackages = "com.epam.spring.homework2.config")
 @Import(App2ConfigBcd.class)
 @ImportResource("classpath:bean.xml")
 public class App2Config {
