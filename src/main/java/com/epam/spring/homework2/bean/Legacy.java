@@ -1,4 +1,4 @@
-package com.epam.spring.homework2.beanito;
+package com.epam.spring.homework2.bean;
 
 public class Legacy {
 

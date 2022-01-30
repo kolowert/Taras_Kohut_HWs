@@ -14,7 +14,7 @@ public class App2 {
 			Object bean = context.getBean(beanDefinitionName);
 			String beanInfo = bean.toString();
 			if (beanInfo.contains("name")) {
-				System.out.println(bean.toString());
+				System.out.println(beanDefinitionName + " >> " + bean.toString());
 			}
 		}
 

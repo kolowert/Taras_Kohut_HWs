@@ -1,6 +1,6 @@
-package com.epam.spring.homework2.beanito;
+package com.epam.spring.homework2.bean;
 
-public class BeanE {
+public class BeanF {
 	private String name;
 	private long value;
 	
