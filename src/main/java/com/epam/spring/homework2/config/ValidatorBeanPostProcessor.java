@@ -21,13 +21,13 @@ public class ValidatorBeanPostProcessor implements BeanPostProcessor {
 				field.setAccessible(true);
 				Object value = field.get(bean);
 				if (value == null) {
-					InalidBeanException(beanName, "Field 'name' shouldn't be null!");
+					invalidBeanException(beanName, "Field 'name' shouldn't be null!");
 				}
 				Field field2 = bean.getClass().getDeclaredField("value");
 				field2.setAccessible(true);
 				Object value2 = field2.get(bean);
 				if (value2 == null || Integer.valueOf(value2.toString()) < 0) {
-					InalidBeanException(beanName, "Field 'value' shouldn't be lower than 0!");
+					invalidBeanException(beanName, "Field 'value' shouldn't be lower than 0!");
 				}
 			} catch (Exception e) {
 				System.out.println("caught Exception @ " + beanName);
@@ -37,7 +37,7 @@ public class ValidatorBeanPostProcessor implements BeanPostProcessor {
 		return bean;
 	}
 
-	private void InalidBeanException(String beanName, String message) {
+	private void invalidBeanException(String beanName, String message) {
 		throw new RuntimeException("Invalid bean: " + beanName + "! " + message);
 	}
 
