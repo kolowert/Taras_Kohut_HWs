@@ -7,7 +7,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
 import com.epam.spring.homework2.abstraction.CustomComponent;
-import com.epam.spring.homework2.abstraction.ShouldValid;
+import com.epam.spring.homework2.abstraction.Validated;
 
 @Component
 public class ValidatorBeanPostProcessor implements BeanPostProcessor {
@@ -15,7 +15,7 @@ public class ValidatorBeanPostProcessor implements BeanPostProcessor {
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		System.out.println(beanName + " ~ postProcessAfterInitialization # ValidatorBeanPostProcessor");
 		if (bean.getClass().isAnnotationPresent(CustomComponent.class)
-				&& bean.getClass().isAnnotationPresent(ShouldValid.class)) {
+				&& bean.getClass().isAnnotationPresent(Validated.class)) {
 			try {
 				Field field = bean.getClass().getDeclaredField("name");
 				field.setAccessible(true);

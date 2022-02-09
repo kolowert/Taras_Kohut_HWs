@@ -2,18 +2,14 @@ package com.epam.spring.homework2.bean;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.epam.spring.homework2.abstraction.CustomComponent;
-import com.epam.spring.homework2.abstraction.ShouldValid;
+import com.epam.spring.homework2.abstraction.Validated;
 
 @Component
 @CustomComponent
-@ShouldValid
-@Qualifier("justA")
-@Order(4)
+@Validated
 public class BeanA implements InitializingBean, DisposableBean {
 	private final String name;
 	private final int value;

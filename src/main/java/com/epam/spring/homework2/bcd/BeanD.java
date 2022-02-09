@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 
 import com.epam.spring.homework2.abstraction.CustomComponent;
-import com.epam.spring.homework2.abstraction.ShouldValid;
+import com.epam.spring.homework2.abstraction.Validated;
 
 @CustomComponent
-@ShouldValid
+@Validated
 @PropertySource("classpath:bcd.properties")
 public class BeanD {
 	@Value("${beanD.name}")

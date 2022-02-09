@@ -1,9 +1,0 @@
-beanB:
-    name: Yaml Bob
-    value: !!int 471952
-beanC:
-    name: Yaml Clara
-    value: !!int 471952
-beanD:
-    name: Yaml Daniela
-    value: !!int 472007

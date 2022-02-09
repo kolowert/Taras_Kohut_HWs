@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.Ordered;
@@ -18,7 +17,6 @@ import com.epam.spring.homework2.bean.BeanF;
 @PropertySource("classpath:bcd.properties")
 @ComponentScan(basePackages = "com.epam.spring.homework2.config")
 @Import(App2ConfigBcd.class)
-@ImportResource("classpath:bean.xml")
 public class App2Config {
 
 	@Bean

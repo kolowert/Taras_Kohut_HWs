@@ -3,10 +3,10 @@ package com.epam.spring.homework2.bean;
 import org.springframework.beans.factory.annotation.Value;
 
 import com.epam.spring.homework2.abstraction.CustomComponent;
-import com.epam.spring.homework2.abstraction.ShouldValid;
+import com.epam.spring.homework2.abstraction.Validated;
 
 @CustomComponent
-@ShouldValid
+@Validated
 public class BeanF {
 	
 	@Value("Funy Felicia")

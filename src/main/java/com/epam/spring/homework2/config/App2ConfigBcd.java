@@ -3,6 +3,7 @@ package com.epam.spring.homework2.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
 import com.epam.spring.homework2.bcd.BeanB;
@@ -25,7 +26,7 @@ public class App2ConfigBcd {
 	}
 	
 	@Bean(initMethod="init",destroyMethod="destroy")
-	@Order(1)
+	@Order(Ordered.HIGHEST_PRECEDENCE)
 	public BeanD beanD() {
 		return new BeanD();
 	}

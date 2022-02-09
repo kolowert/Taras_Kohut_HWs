@@ -4,10 +4,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import com.epam.spring.homework2.abstraction.CustomComponent;
-import com.epam.spring.homework2.abstraction.ShouldValid;
+import com.epam.spring.homework2.abstraction.Validated;
 
 @CustomComponent
-@ShouldValid
+@Validated
 public class BeanE {
 	private String name;
 	private int value;
