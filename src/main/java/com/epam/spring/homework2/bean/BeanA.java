@@ -2,13 +2,10 @@ package com.epam.spring.homework2.bean;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
 
-import com.epam.spring.homework2.abstraction.CustomComponent;
 import com.epam.spring.homework2.abstraction.Validated;
 
-@Component
-@CustomComponent
+//@CustomComponent
 @Validated
 public class BeanA implements InitializingBean, DisposableBean {
 	private final String name;

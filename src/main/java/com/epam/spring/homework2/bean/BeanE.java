@@ -3,10 +3,9 @@ package com.epam.spring.homework2.bean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import com.epam.spring.homework2.abstraction.CustomComponent;
 import com.epam.spring.homework2.abstraction.Validated;
 
-@CustomComponent
+//@CustomComponent
 @Validated
 public class BeanE {
 	private String name;

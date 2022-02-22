@@ -12,20 +12,20 @@ import com.epam.spring.homework2.bcd.BeanD;
 
 @Configuration
 public class App2ConfigBcd {
-	
-	@Bean(initMethod="init",destroyMethod="destroy")
+
+	@Bean(initMethod = "init", destroyMethod = "destroy")
 	@DependsOn("beanD")
 	public BeanB beanB() {
 		return new BeanB();
 	}
-	
-	@Bean(initMethod="init",destroyMethod="destroy")
-	@DependsOn("beanB")
+
+	@Bean(initMethod = "init", destroyMethod = "destroy")
+	@DependsOn(value = { "beanD", "beanB" })
 	public BeanC beanC() {
 		return new BeanC();
 	}
-	
-	@Bean(initMethod="init",destroyMethod="destroy")
+
+	@Bean(initMethod = "init", destroyMethod = "destroy")
 	@Order(Ordered.HIGHEST_PRECEDENCE)
 	public BeanD beanD() {
 		return new BeanD();

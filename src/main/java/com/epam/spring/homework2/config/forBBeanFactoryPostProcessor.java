@@ -13,7 +13,7 @@ public class forBBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 		System.out.println("inside postProcessBeanFactory # forBBeanFactoryPostProcessor");
 		BeanDefinition bd = beanFactory.getBeanDefinition("beanB");
-        bd.setInitMethodName("init2");
+		bd.setInitMethodName("init2");
 	}
 
 }
